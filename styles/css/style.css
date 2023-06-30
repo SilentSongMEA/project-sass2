@@ -1,0 +1,52 @@
+@import "variable.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  margin: 0 20px;
+  color: rgb(0, 0, 29);
+  background: linear-gradient(90deg, rgb(252, 185, 252) 0%, rgb(148, 233, 196) 100%);
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+  border-radius: 0 0 6px 6px;
+}
+header .header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+.header-ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.header-ul li {
+  list-style: none;
+  margin-left: 15px;
+}
+.header-ul li a {
+  text-decoration: none;
+}
+.header-ul li a:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #323853 0%, #6e37d3 33%, #451e7c 100%);
+  font-weight: 600;
+  transition: all 0.4s ease-in;
+  padding: 10px;
+  border-radius: 35px;
+}
+
+/*# sourceMappingURL=style.css.map */
