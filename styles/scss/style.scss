@@ -2,8 +2,7 @@
 @import "mixin.scss";
 
 *{
-    margin: 0;
-    padding: 0;
+ @include allstylepage;
 }
 
 header{
@@ -12,6 +11,10 @@ header{
     text-align: center;
     padding: 20px;
     margin: 0 20px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(30px);
+    transition: all .4s ease;
     @include textStyle;
     .header{
 
@@ -31,6 +34,7 @@ img{
     text-align: center;
     align-items: center;
    margin-right: 15px;
+
     li{
       
         list-style: none;

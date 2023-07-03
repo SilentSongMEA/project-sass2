@@ -1,22 +1,28 @@
 @import "variable.css";
 
+
+@mixin allstylepage{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 @mixin textStyle{
     color: $colorWords;
     background: $colorBg;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight:700;
+    font-size: 1.2rem;
+    
     padding: 15px;
     border-radius:0 0 6px 6px;
 }
 
 @mixin effectHover{
     &:hover{
-        color:$colorWordsHover;
-        background: $colorBgHover;
-        font-weight: 600;
-        transition: all .4s ease-in;
-        padding: 10px;
-        border-radius: 35px;
+        color:$colorWordhover;
+        padding:0 20px;
+        font-weight: 900;
+        transition: all .2s ease;
+       
        
     }
 

@@ -1,5 +1,6 @@
 @import "variable.css";
 * {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -10,10 +11,14 @@ header {
   text-align: center;
   padding: 20px;
   margin: 0 20px;
-  color: rgb(0, 0, 29);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(30px);
+  transition: all 0.4s ease;
+  color: #10004b;
   background: linear-gradient(90deg, rgb(252, 185, 252) 0%, rgb(148, 233, 196) 100%);
-  font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
   padding: 15px;
   border-radius: 0 0 6px 6px;
 }
@@ -41,12 +46,10 @@ header img {
   text-decoration: none;
 }
 .header-ul li a:hover {
-  color: #fff;
-  background: linear-gradient(135deg, #323853 0%, #6e37d3 33%, #451e7c 100%);
-  font-weight: 600;
-  transition: all 0.4s ease-in;
-  padding: 10px;
-  border-radius: 35px;
+  color: rgba(0, 0, 0, 0.918);
+  padding: 0 20px;
+  font-weight: 900;
+  transition: all 0.2s ease;
 }
 
 /*# sourceMappingURL=style.css.map */
