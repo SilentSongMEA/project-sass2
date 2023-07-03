@@ -6,14 +6,13 @@
     margin: 0;
     padding: 0;
 }
-@mixin textStyle{
-    color: $colorWords;
-    background: $colorBg;
+@mixin textStyle($color,$bgmicolor,$bord){
+    color: $color;
+    background: $bgmicolor;
     font-weight:700;
     font-size: 1.2rem;
-    
     padding: 15px;
-    border-radius:0 0 6px 6px;
+    border-radius:$bord;
 }
 
 @mixin effectHover{
@@ -26,4 +25,17 @@
        
     }
 
+}
+@mixin media($size){
+    @if($size==M){
+        @media (max-width:768px) {
+            @content;
+        }
+
+    }
+    @else if($size==L){
+        @media (min-width:768px) and (max-width:1200px) {
+            @content;
+        }
+    }
 }

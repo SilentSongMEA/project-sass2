@@ -4,7 +4,9 @@
 *{
  @include allstylepage;
 }
-
+body{
+    background: $colorbgbody;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -15,7 +17,7 @@ header{
     top: 0;
     backdrop-filter: blur(30px);
     transition: all .4s ease;
-    @include textStyle;
+    @include textStyle($colorWords,$colorBg,0 0 6px 6px);
     .header{
 
         display: flex;
@@ -44,5 +46,70 @@ img{
             @include effectHover;
             text-decoration: none;
         }
+    }
+}
+.hamburger-menu{
+    display: none;
+    flex-direction: column;
+justify-content: center;
+
+    span{
+display: inline-block;
+height: 5px;
+width: 20px;
+margin-top: 2px;
+background:$colorWords ;
+border-radius: 20px;
+    }
+}
+
+@include media(M){
+    .hamburger-menu{
+        display: flex;
+    }
+    header{.header{
+        display: none;
+    }
+}
+}
+
+.main{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px 10px;
+
+
+aside,main{
+  background: $colorBg;
+  margin: 0 8px;
+  height: 400px;
+  border-radius: 12px;
+ text-align: center;
+justify-content: center;
+padding: 25px 0;
+}
+
+img{
+width: 300px;
+border-radius: 2px;
+}
+}
+main{
+    width: 65%;
+  h2{
+    margin: 10px 0;
+  }
+}
+aside{
+    width: 35%;
+
+    div{
+        margin: 20px;
+       
+        padding: 10px;
+       
+        @include textStyle(#fff,$bgdivaside,10px)
+       
     }
 }
