@@ -110,13 +110,13 @@ aside {
 }
 aside div {
   margin: 20px;
-  padding: 10px;
+  padding: 10px 40px;
   color: #fff;
   background: linear-gradient(135deg, #323853 0%, #6e37d3 33%, #451e7c 100%);
   font-weight: 700;
   font-size: 1.2rem;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
