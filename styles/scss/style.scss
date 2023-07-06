@@ -6,6 +6,7 @@
 }
 body{
     background: $colorbgbody;
+
 }
 header{
     display: flex;
@@ -94,7 +95,8 @@ img{
 main{
     width: 65%;
   h2{
-    margin: 10px 0;
+    margin: 15px 0;
+    
   }
   p{
     font-size: 1.3rem;
@@ -109,10 +111,86 @@ aside{
        
         padding: 0 30px;
         @include boxstyle;
-        @include textStyle(#fff,$bgdivaside,15px)
-       
+        @include textStyle(#fff,$bgdivaside,15px);
+        @include effectHover;
     }
 }
+
+.cards{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: auto;
+gap: 30px;
+width: calc(100% - 6rem);
+padding: 2rem 3rem;
+margin-top: 30px;
+}
+.card{
+    margin: 0 auto;
+    @include boxstyle;
+    img{
+        width: 100%;
+    }
+    .content-card{
+    p{
+        @include text(1.3rem,500,$colorWordhover);
+        padding: 0 20px;
+        margin: 6px 0;
+      
+    }
+    span{
+        @include text(1rem,bold,$bgdivaside);
+        padding: 0 20px;
+       margin: 5px 0;
+        display: inline-block;
+    }
+    }
+}
+
+footer{
+    display: flex;
+    margin-top: 50px;
+    
+    background: $colorBg;
+    padding: 2rem 3rem;
+    .summary{
+        width: 50%;
+        text-align: justify;
+        @include text(.9rem,bold,$bgdivaside);
+        margin-right: 10rem;
+    }
+    .links{
+      ul{
+        list-style-type: none;
+      }
+      a{
+        text-decoration: none;
+         @include text(1.2rem,bold,$bgdivaside);
+      
+         @include effectHover;
+      }
+    }
+}
+.tel{
+   
+
+    img{ 
+        position:fixed;
+        z-index: 100;
+        bottom: 25px;
+        left: 2rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        &:hover{
+          box-shadow: 15px 10px 50px #fde2ff,
+          -15px -10px 40px #df2eff;
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////
+
+
 
 @include media(M){
     .hamburger-menu{
@@ -141,4 +219,27 @@ aside{
         }
     }
 }
+.cards{
+    grid-template-columns: 1fr;
+
+}
+footer{
+    flex-direction: column;
+    .summary{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .ilnks{
+        width: 100%;
+       
+        
+    }
+}
+    }
+
+    @include media(L) {
+        .cards{
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
     }

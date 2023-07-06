@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #edf4f7;
+  background: rgba(253, 247, 249, 0.847);
 }
 
 header {
@@ -51,7 +51,6 @@ header img {
 }
 .header-ul li a:hover {
   color: rgba(0, 0, 0, 0.918);
-  padding: 0 20px;
   font-weight: 900;
   transition: all 0.2s ease;
 }
@@ -97,7 +96,7 @@ main {
   width: 65%;
 }
 main h2 {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 main p {
   font-size: 1.3rem;
@@ -117,6 +116,87 @@ aside div {
   font-size: 1.2rem;
   padding: 15px;
   border-radius: 15px;
+}
+aside div:hover {
+  color: rgba(0, 0, 0, 0.918);
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  width: calc(100% - 6rem);
+  padding: 2rem 3rem;
+  margin-top: 30px;
+}
+
+.card {
+  margin: 0 auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+}
+.card .content-card p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.918);
+  padding: 0 20px;
+  margin: 6px 0;
+}
+.card .content-card span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: linear-gradient(135deg, #323853 0%, #6e37d3 33%, #451e7c 100%);
+  padding: 0 20px;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+footer {
+  display: flex;
+  margin-top: 50px;
+  background: linear-gradient(90deg, rgb(252, 185, 252) 0%, rgb(148, 233, 196) 100%);
+  padding: 2rem 3rem;
+}
+footer .summary {
+  width: 50%;
+  text-align: justify;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: linear-gradient(135deg, #323853 0%, #6e37d3 33%, #451e7c 100%);
+  margin-right: 10rem;
+}
+footer .links ul {
+  list-style-type: none;
+}
+footer .links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: linear-gradient(135deg, #323853 0%, #6e37d3 33%, #451e7c 100%);
+}
+footer .links a:hover {
+  color: rgba(0, 0, 0, 0.918);
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.tel img {
+  position: fixed;
+  z-index: 100;
+  bottom: 25px;
+  left: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.tel img:hover {
+  box-shadow: 15px 10px 50px #fde2ff, -15px -10px 40px #df2eff;
 }
 
 @media (max-width: 768px) {
@@ -141,6 +221,25 @@ aside div {
   }
   .main aside div {
     margin: 25px 45px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .summary {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .ilnks {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 }
 
